@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Publicacoes/Mensageria</_PublishTargetUrl>
+    <History>True|2023-11-07T18:29:13.4272304Z;True|2023-11-07T11:02:25.8318484-03:00;True|2023-11-07T11:01:49.8802735-03:00;True|2023-11-07T10:47:12.4282941-03:00;True|2023-11-07T10:43:12.3659238-03:00;</History>
+  </PropertyGroup>
+</Project>
