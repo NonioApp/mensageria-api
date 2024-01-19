@@ -44,7 +44,7 @@ namespace Mensageria.Controllers
         }
 
         [HttpPost("SendNotificacaoAppParametros")]
-        public Retorno<RetornoNotificacaoAppModel> SendNotificacaoAppParametros(int IdEmpresa, int IdUsuario, string Titulo, string Mensagem)
+        public Retorno<RetornoNotificacaoAppModel> SendNotificacaoAppParametros(int IdEmpresa, int IdUsuario, string Titulo, string Mensagem, string Nome, string ImagemUsuario)
         {
             Retorno<RetornoNotificacaoAppModel> retorno = new Retorno<RetornoNotificacaoAppModel>();
 
@@ -60,14 +60,14 @@ namespace Mensageria.Controllers
                 dynamic fireBaseUsuario = utilNotificacao.SelectTokenUsuario(IdEmpresa, IdUsuario, out campoUsuario);
 
                 notificacao.to = fireBaseUsuario[campoUsuario].token;
-                notificacao.data.Titulo = Titulo;
+                notificacao.data.Titulo = Titulo + " - " + Nome;
                 notificacao.data.Messagem = Mensagem;
-                notificacao.data.NomeUsuario = "Testando Nome Usuario";
+                notificacao.data.NomeUsuario = Nome;
                 notificacao.data.IdUsuario = IdUsuario.ToString();
                 notificacao.data.TokenUsuario = "";
-                notificacao.data.ImageUsuario = "";
+                notificacao.data.ImageUsuario = ImagemUsuario;
                 notificacao.data.IdTipoAlerta = "5502"; //Notificação
-                notificacao.data.IdTipoNotificacao = "5"; //Push
+                notificacao.data.IdTipoNotificacao = "6904"; //Push
                 notificacao.data.IdArea = "1";
 
                 if (enviaNotificacao)
